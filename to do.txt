@@ -1,0 +1,2 @@
+- Correct the grid of article (Material or Bootstrap)
+- work on article component to make it dynamic
