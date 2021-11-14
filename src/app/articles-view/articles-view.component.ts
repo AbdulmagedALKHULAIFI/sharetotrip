@@ -9,6 +9,7 @@ import { ArticleService } from '../services/article.service';
 })
 export class ArticlesViewComponent implements OnInit {
   articles: any[] | undefined;
+  gridColumns = 3;
 
   constructor(private articleservice: ArticleService) {
   }

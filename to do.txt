@@ -1,2 +1,17 @@
-- Correct the grid of article (Material or Bootstrap)
-- work on article component to make it dynamic
+To do : 
+	
+	- Create component for whole article
+	- error 404 page
+	- Auth page and restrict certain actions for no authenfied users
+	- Create database with real data
+	- Generate shareable link for post
+	- Integrate like counter/system
+	- Create an account via Gmail
+	- Forgetten password
+	- Create portfolio 
+
+
+
+Source:
+
+	- For deck cards example : https://zoaibkhan.com/blog/create-a-responsive-card-grid-in-angular-using-flex-layout-part-1/

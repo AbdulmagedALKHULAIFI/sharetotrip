@@ -1,71 +1,32 @@
-<!--<ul class="list-group">
-  <li *ngFor="let article of articles">
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="{{ article.image_src}}" alt="Card image cap">
-      <div class="card-body">
-        <p class="card-text"> {{ article.description}}</p>
-      </div>
-    </div>
-  </li>
-</ul>-->
-
-
-<!--<div class="container">
-  <div class="row">
-    <div class="col">
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="https://cdn.mos.cms.futurecdn.net/ntFmJUZ8tw3ULD3tkBaAtf.jpg" alt="Card image cap">
-        <div class="card-body">
-          <p class="card-text"> Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="https://cdn.mos.cms.futurecdn.net/ntFmJUZ8tw3ULD3tkBaAtf.jpg" alt="Card image cap">
-        <div class="card-body">
-          <p class="card-text"> Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="https://cdn.mos.cms.futurecdn.net/ntFmJUZ8tw3ULD3tkBaAtf.jpg" alt="Card image cap">
-        <div class="card-body">
-          <p class="card-text"> Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-    </div>
+<mat-toolbar color="primary">
+  <span>Card view demo</span>
+  <div fxHide.lt-md>
+    <span class="column-label">Columns</span>
+    <mat-slider [max]="6" [min]="3" [(ngModel)]="gridColumns" [thumbLabel]="true">
+    </mat-slider>
   </div>
-</div>-->
+</mat-toolbar>
 
-
-<div class="container">
-  <div class="row">
-    <div class="col-lg-4">
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="https://cdn.mos.cms.futurecdn.net/ntFmJUZ8tw3ULD3tkBaAtf.jpg" alt="Card image cap">
-        <div class="card-body">
-          <p class="card-text"> Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4">
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="https://cdn.mos.cms.futurecdn.net/ntFmJUZ8tw3ULD3tkBaAtf.jpg" alt="Card image cap">
-        <div class="card-body">
-          <p class="card-text"> Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-4">
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="https://cdn.mos.cms.futurecdn.net/ntFmJUZ8tw3ULD3tkBaAtf.jpg" alt="Card image cap">
-        <div class="card-body">
-          <p class="card-text"> Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
+<div class="content">
+  <div fxLayout="row wrap" fxLayoutGap="16px grid">
+    <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let article of articles">
+      <mat-card class="mat-elevation-z4">
+        <mat-card-header>
+          <mat-card-title>{{article.articleTitle}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="{{ article.articlePrincipaleImage}}">
+        <mat-card-content>
+          <p>
+            {{ article.articleDescription}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>Like</button>
+          <button mat-button>Read</button>
+          <button mat-button>Share</button>
+        </mat-card-actions>
+      </mat-card>
     </div>
   </div>
 </div>
+

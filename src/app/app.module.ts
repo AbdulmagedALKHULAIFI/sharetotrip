@@ -7,11 +7,16 @@ import { TravelerComponent } from './traveler/traveler.component';
 import { ArticleComponent } from './article/article.component';
 import { AuthComponent } from './auth/auth.component';
 
+import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ArticlesViewComponent } from './articles-view/articles-view.component';
 import { ArticleService } from './services/article.service';
-import { MdCardModule } from '@angular/material';
+import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatButtonModule } from '@angular/material/button';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 const appRoutes: Routes = [
   { path: 'auth', component: AuthComponent },
@@ -31,8 +36,13 @@ const appRoutes: Routes = [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
-    MdCardModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatToolbarModule,
+    MatButtonModule,
+    FlexLayoutModule,
+    FormsModule,
+    MatSliderModule
   ],
   providers: [
     ArticleService
@@ -40,3 +50,5 @@ const appRoutes: Routes = [
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+

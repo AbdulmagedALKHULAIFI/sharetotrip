@@ -2,3 +2,11 @@
   max-height: 20vh; /*not want to take all vertical space*/
   object-fit: contain; /*show all image, autosized, no cut, in available space*/
 }
+
+.content {
+  padding: 16px;
+}
+
+.content > mat-card {
+  width: 200px;
+}
